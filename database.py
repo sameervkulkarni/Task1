@@ -10,6 +10,9 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
+"""mycursor.execute("CREATE DATABASE studentmarks")
+mycursor.execute("CREATE TABLE students (name VARCHAR, dept VARCHAR, math INTEGER, phy INTEGER, chem INTEGER, elec INTEGER, eng INTEGER, Total INTEGER, avg FLOAT, grade VARCHAR")"""
+
 sqlFormula = """INSERT INTO students (name, dept, math, phy, chem, elec, eng, total, avg, grade) 
              VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
 std_info = []
